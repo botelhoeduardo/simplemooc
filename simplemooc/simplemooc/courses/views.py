@@ -10,10 +10,10 @@ def courses(request):
     }
     return render(request, template_name, context)
 
-def details(request):
+def details(request, pk):
     course = Course.objects.get(pk=pk)
     context = {
         'course' : course
     }
     template_name = 'courses/details.html'
-    render(request, template_name, context)
+    return render(request, template_name, context)

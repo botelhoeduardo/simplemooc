@@ -23,5 +23,5 @@ admin.autodiscover()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('simplemooc.core.urls', namespace='core')),
-    path('cursos', include('simplemooc.courses.urls', namespace='courses')),
+    path('cursos/', include('simplemooc.courses.urls', namespace='courses')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
